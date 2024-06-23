@@ -1,3 +1,5 @@
+import ChildrenComponent from "./ChildrenComponent";
+
 type TProps = {
   count: number;
   setCount: React.Dispatch<React.SetStateAction<number>>;
@@ -12,6 +14,8 @@ const CounterWithFunctional = ({ count, setCount }: TProps) => {
       >
         {count}
       </button>
+
+      <ChildrenComponent count={count} />
     </div>
   );
 };
